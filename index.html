@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FULLSTACK Seminar 2026 | Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <header class="hero">
+
+        <!-- Background -->
+        <div class="hero-bg"></div>
+
+        <!-- Blue / Purple Overlay -->
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <!-- SCHOOL LOGO -->
+            <img
+                src="assets/minsu-logo.png"
+                alt="Mindoro State University Logo"
+                class="hero-logo"
+            >
+
+            <!-- SCHOOL NAME -->
+            <div class="school-brand">
+
+                <span class="school-name">
+                    MINDORO STATE UNIVERSITY
+                </span>
+
+                <span class="school-college">
+                    College of Computer Studies
+                </span>
+
+            </div>
+
+
+            <!-- EVENT LABEL -->
+            <div class="event-label">
+                SEMINAR 2026
+            </div>
+
+
+            <!-- MAIN TITLE -->
+            <h1>
+                FULLSTACK
+            </h1>
+
+
+            <!-- SUBTITLE -->
+            <h2>
+                A Hands-On Journey Through
+                <strong>Modern Web Development</strong>
+            </h2>
+
+
+            <!-- DESCRIPTION -->
+            <p class="hero-description">
+                Discover how modern web applications are built —
+                from APIs and databases to powerful user interfaces.
+            </p>
+
+
+            <!-- =================================================
+                 EVENT DETAILS
+            ================================================== -->
+
+            <div class="event-details">
+
+                <!-- DATE -->
+                <div class="event-card">
+
+                    <span class="detail-icon">
+                        12
+                    </span>
+
+                    <div class="detail-text">
+
+                        <strong>
+                            October 12, 2026
+                        </strong>
+
+                        <span>
+                            DATE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIME -->
+                <div class="event-card">
+
+                    <span class="detail-icon">
+                        08
+                    </span>
+
+                    <div class="detail-text">
+
+                        <strong>
+                            8:00 AM – 11:00 AM
+                        </strong>
+
+                        <span>
+                            TIME
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VENUE -->
+                <div class="event-card">
+
+                    <span class="detail-icon">
+                        AU
+                    </span>
+
+                    <div class="detail-text">
+
+                        <strong>
+                            University Auditorium
+                        </strong>
+
+                        <span>
+                            VENUE
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         REGISTRATION SECTION
+    ====================================================== -->
+
+    <main class="registration-container">
+
+
+        <!-- =================================================
+             PROGRESS
+        ================================================== -->
+
+        <div class="progress-area">
+
+            <div class="progress-info">
+
+                <span>
+                    Registration
+                </span>
+
+                <span id="stepText">
+                    Step 1 of 3
+                </span>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progress"
+                    class="progress">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STEP 1
+        ================================================== -->
+
+        <section
+            id="step1"
+            class="form-step active">
+
+            <div class="step-heading">
+
+                <span class="step-number">
+                    01
+                </span>
+
+                <div>
+
+                    <h3>
+                        Participant Information
+                    </h3>
+
+                    <p>
+                        Tell us a little about yourself.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FULL NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+
+                    Full Name
+
+                    <span>*</span>
+
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                >
+
+                <small id="nameError"></small>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+
+                    Email Address
+
+                    <span>*</span>
+
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                >
+
+                <small id="emailError"></small>
+
+            </div>
+
+
+            <!-- CONTINUE -->
+
+            <button
+                type="button"
+                class="primary-button"
+                onclick="nextStep()"
+            >
+
+                Continue
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 2
+        ================================================== -->
+
+        <section
+            id="step2"
+            class="form-step">
+
+            <div class="step-heading">
+
+                <span class="step-number">
+                    02
+                </span>
+
+                <div>
+
+                    <h3>
+                        Academic Information
+                    </h3>
+
+                    <p>
+                        Select your year level and section.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- YEAR LEVEL -->
+
+            <div class="form-group">
+
+                <label>
+
+                    Year Level
+
+                    <span>*</span>
+
+                </label>
+
+
+                <div class="option-grid">
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectYear(this, '1st Year')"
+                    >
+                        1st Year
+                    </button>
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectYear(this, '2nd Year')"
+                    >
+                        2nd Year
+                    </button>
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectYear(this, '3rd Year')"
+                    >
+                        3rd Year
+                    </button>
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectYear(this, '4th Year')"
+                    >
+                        4th Year
+                    </button>
+
+                </div>
+
+
+                <small id="yearError"></small>
+
+            </div>
+
+
+            <!-- SECTION -->
+
+            <div class="form-group">
+
+                <label>
+
+                    Section
+
+                    <span>*</span>
+
+                </label>
+
+
+                <div class="section-options">
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectSection(this, 'F1')"
+                    >
+                        F1
+                    </button>
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectSection(this, 'F2')"
+                    >
+                        F2
+                    </button>
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectSection(this, 'F3')"
+                    >
+                        F3
+                    </button>
+
+                    <button
+                        type="button"
+                        class="option"
+                        onclick="selectSection(this, 'F4')"
+                    >
+                        F4
+                    </button>
+
+                </div>
+
+
+                <small id="sectionError"></small>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="button-row">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    onclick="previousStep()"
+                >
+                    ← Back
+                </button>
+
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    onclick="nextStep()"
+                >
+                    Continue
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 3
+        ================================================== -->
+
+        <section
+            id="step3"
+            class="form-step">
+
+            <div class="step-heading">
+
+                <span class="step-number">
+                    03
+                </span>
+
+                <div>
+
+                    <h3>
+                        Confirm Registration
+                    </h3>
+
+                    <p>
+                        Review your information before submitting.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <div class="summary-card">
+
+                <div class="summary-item">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong id="summaryName">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="summaryEmail">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Year
+                    </span>
+
+                    <strong id="summaryYear">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Section
+                    </span>
+
+                    <strong id="summarySection">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRIVACY -->
+
+            <label class="privacy-box">
+
+                <input
+                    type="checkbox"
+                    id="privacy"
+                >
+
+                <span>
+
+                    I agree that my information will be used only
+                    for the registration, attendance monitoring,
+                    certificate issuance, and other official
+                    purposes related to the FULLSTACK Seminar.
+
+                </span>
+
+            </label>
+
+
+            <small
+                id="privacyError"
+                class="error-message">
+            </small>
+
+
+            <!-- BUTTONS -->
+
+            <div class="button-row">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    onclick="previousStep()"
+                >
+                    ← Back
+                </button>
+
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    onclick="submitRegistration()"
+                >
+                    Complete Registration
+                    <span>✓</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUCCESS
+        ================================================== -->
+
+        <section
+            id="success"
+            class="success-screen">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h3>
+                Registration Complete!
+            </h3>
+
+            <p>
+                Thank you for registering for
+                <strong>FULLSTACK Seminar 2026.</strong>
+            </p>
+
+            <div class="success-date">
+                October 12, 2026
+            </div>
+
+            <p class="success-note">
+                We look forward to seeing you
+                at the University Auditorium.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <strong>
+            FULLSTACK Seminar 2026
+        </strong>
+
+        <span>
+            Mindoro State University · College of Computer Studies
+        </span>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
